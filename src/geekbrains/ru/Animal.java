@@ -9,17 +9,28 @@ package geekbrains.ru;
 
  abstract class  Animal {
 
-    protected int runDistance;
-    protected int swimDistance;
-    protected int height;
+    public int maxRunDistance;
 
-    abstract void run(int runDistance);
 
+    void setMaxRunDistance(int maxRunDistance)
+    {
+       this.maxRunDistance = maxRunDistance;
+    }
+    void run(int runDistance)
+    {
+       boolean result = runDistance <= maxRunDistance;
+       if (runDistance <= maxRunDistance)
+       {
+          printResult(result);
+       }
+       if (runDistance > maxRunDistance)
+       {
+          System.out.println(getClass().getName() + " don't run for such a long distances :( ");
+       }
+
+    }
 
     abstract void swim(int swimDistance);
-
-
-    abstract void jump(int height);
 
     void printResult( boolean result)
     {
