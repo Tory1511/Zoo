@@ -12,19 +12,28 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Animal cat = new Cat();
+        Cat cat = new Cat();
+        cat.setMaxRunDistance(100);
+
+        Cat catOne = new Cat();
+        catOne.setMaxRunDistance(5); //very old cat
+
         cat.jump(2);
         cat.jump(5); // out of limit test
         cat.swim(1);
         cat.run(100);
         cat.run(500);// out of limit test
 
-        Animal dog = new Dog();
+        catOne.run(2);
+        catOne.run(10);
+
+        Dog dog = new Dog();
+        dog.setMaxRunDistance(500);
         dog.run(450);
         dog.run(550);// out of limit test
 
 
-        dog.jump(1);
+        dog.jump(0.5f);
         dog.jump(3);// out of limit test
 
         dog.swim(5);

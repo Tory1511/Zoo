@@ -4,20 +4,6 @@ class Dog extends Animal
 
 {
 
-
-    @Override
-    void run(int runDistance) {
-        boolean result = runDistance <= 500;
-        if (runDistance <= 500)
-        {
-            printResult(result);
-        }
-        if (runDistance > 500)
-        {
-            System.out.println("Dogs don't run for such a long distances :( ");
-        }
-    }
-
     @Override
     void swim(int swimDistance)
     {
@@ -34,8 +20,7 @@ class Dog extends Animal
 
     }
 
-    @Override
-    void jump(int height)
+    void jump(float height)
     {
         boolean result = height <= 1;
         if (height <= 1)
